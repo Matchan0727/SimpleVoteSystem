@@ -1,0 +1,30 @@
+name: SimpleVoteSystem
+version: 1.0
+main: jp.simplespace.simplevotesystem.SimpleVoteSystem
+description: シンプルな投票機能プラグイン
+author: Matchan
+website: https://simplespace.jp
+
+commands:
+  vote:
+    usage: /<command>
+    description: 投票のコマンド。
+
+permissions:
+  SimpleVote.command.*:
+    description: すべての権限を手に入れよう。
+    default: op
+    children:
+      SimpleVote.command.vote.*: true
+  SimpleVote.command.vote.*:
+    description: voteコマンドのすべての権限を手に入れよう。
+    default: op
+    children:
+      SimpleVote.command.vote.create: true
+      SimpleVote.command.vote.stop: true
+  SimpleVote.command.vote.create:
+    description: /vote createコマンドの権限。
+    default: op
+  SimpleVote.command.vote.stop:
+    description: /vote stopコマンドの権限。
+    default: op
