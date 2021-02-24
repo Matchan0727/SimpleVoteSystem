@@ -1,6 +1,0 @@
-jp/simplespace/simplevotesystem/SimpleVoteSystem.java
- jp.simplespace.simplevotesystem.SimpleVoteSystem
-jp/simplespace/simplevotesystem/Commands/vote.java
- jp.simplespace.simplevotesystem.Commands.vote
-jp/simplespace/simplevotesystem/Vote.java
- jp.simplespace.simplevotesystem.Vote
