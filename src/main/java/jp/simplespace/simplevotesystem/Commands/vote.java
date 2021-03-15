@@ -1,11 +1,14 @@
 package jp.simplespace.simplevotesystem.Commands;
 
+import org.bukkit.ChatColor;
 import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
 import jp.simplespace.simplevotesystem.Vote;
 import jp.simplespace.simplevotesystem.SimpleVoteSystem;
+
+import static jp.simplespace.simplevotesystem.Vote.vstatus;
 
 public class vote implements CommandExecutor {
 
@@ -30,14 +33,18 @@ public class vote implements CommandExecutor {
                     Vote.vote(p, 2);
                 } else if (args[0].equalsIgnoreCase("stop")) {
                     if (p.hasPermission("SimpleVote.command.vote.stop")) {
-
                         Vote.voteStop(p);
                     } else {
                         p.sendMessage(SimpleVoteSystem.noPermission);
                     }
                 } else if (args[0].equalsIgnoreCase("info")) {
-                    //infoコマンド
-                    Vote.voteInfo(p);
+                    // /vote infoコマンド
+                    if (p.hasPermission("SimpleVote.command.vote.info")) {
+                        if (vstatus == true) {
+                            Vote.voteInfo(p);
+                        } else p.sendMessage(ChatColor.RED + "現在投票は開始されていません。");
+                    } else p.sendMessage(SimpleVoteSystem.noPermission);
+
             } else {
                     p.sendMessage("無効な引数です。");
                 }

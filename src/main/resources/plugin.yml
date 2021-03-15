@@ -1,5 +1,5 @@
 name: SimpleVoteSystem
-version: 1.1
+version: 1.2
 main: jp.simplespace.simplevotesystem.SimpleVoteSystem
 description: シンプルな投票機能プラグイン
 author: Matchan
@@ -22,9 +22,13 @@ permissions:
     children:
       SimpleVote.command.vote.create: true
       SimpleVote.command.vote.stop: true
+      SimpleVote.command.vote.info: true
   SimpleVote.command.vote.create:
     description: /vote createコマンドの権限。
     default: op
   SimpleVote.command.vote.stop:
     description: /vote stopコマンドの権限。
+    default: op
+  SimpleVote.command.vote.info:
+    description: /vote infoコマンドの権限。
     default: op

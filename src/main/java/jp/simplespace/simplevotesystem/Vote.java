@@ -13,7 +13,7 @@ import static jp.simplespace.simplevotesystem.SimpleVoteSystem.answer;
 
 public class Vote {
 
-    private static boolean vstatus = false;
+    public static boolean vstatus = false;
 
     private static String recruiter;
     private static String content;
