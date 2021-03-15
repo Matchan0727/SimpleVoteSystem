@@ -1,5 +1,5 @@
 name: SimpleVoteSystem
-version: @version@
+version: 1.1
 main: jp.simplespace.simplevotesystem.SimpleVoteSystem
 description: シンプルな投票機能プラグイン
 author: Matchan
