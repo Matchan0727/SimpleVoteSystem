@@ -31,4 +31,4 @@ permissions:
     default: op
   SimpleVote.command.vote.info:
     description: /vote infoコマンドの権限。
-    default: op
+    default: true
